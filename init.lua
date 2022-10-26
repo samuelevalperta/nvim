@@ -1,0 +1,6 @@
+require('samuele.plugins-setup')
+require('samuele.core.options')
+require('samuele.core.keymaps')
+require('samuele.core.colorscheme')
+require('samuele.plugins.comment')
+require('samuele.plugins.nvim-tree')
