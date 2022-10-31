@@ -24,7 +24,7 @@ if not status then return
 end
 
 return packer.startup(function(use)
-    
+
     use('wbthomason/packer.nvim')
 
     -- implements lua functions that many plugins use
@@ -43,7 +43,7 @@ return packer.startup(function(use)
 
     -- better comment
     use("numToStr/Comment.nvim")
-    
+
     -- file explorer
 	use("nvim-tree/nvim-tree.lua")
     use("kyazdani42/nvim-web-devicons")
@@ -75,7 +75,8 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
 	use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
 
-
+    -- boolean value toggler
+    use("rmagatti/alternate-toggler")
 
 
     if packer_bootstrap then

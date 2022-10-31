@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/Users/samuelevalperta/.local/share/nvim/site/pack/packer/start/ReplaceWithRegister",
     url = "https://github.com/vim-scripts/ReplaceWithRegister"
   },
+  ["alternate-toggler"] = {
+    loaded = true,
+    path = "/Users/samuelevalperta/.local/share/nvim/site/pack/packer/start/alternate-toggler",
+    url = "https://github.com/rmagatti/alternate-toggler"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/samuelevalperta/.local/share/nvim/site/pack/packer/start/cmp-buffer",
