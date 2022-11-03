@@ -17,6 +17,9 @@ keymap.set("n", "<leader>nh", ":nohl<CR>")
 keymap.set("n", "x", '"_x')
 keymap.set("v", "x", '"_x')
 
+-- yank from cursor to eol
+keymap.set("n", "Y", "y$")
+
 -- increment/decrement numbers
 -- increment with <Ctrl-a>
 -- decrement with <Ctrl-x>
@@ -35,6 +38,10 @@ keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 -- move line
 keymap.set("n", "<A-j>", ":m .+1<CR>==")
 keymap.set("n", "<A-k>", ":m .-2<CR>==")
+
+-- run python script
+keymap.set("n", "<leader><CR>", ":w <CR>:!clear <CR> !python3 %<CR>")
+
 
 -- plugin keymaps
 
