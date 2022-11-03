@@ -140,7 +140,8 @@ ins_right{
         return ''
     end,
     color = {fg = colors.fg},
-    padding = {left = 1, right = 0}
+    padding = {left = 1, right = 0},
+    cond = conditions.check_git_workspace,
 }
 
 ins_right {
