@@ -10,6 +10,12 @@ vim.g.loaded_netrwPlugin = 1
 -- change color for arrows in tree to light blue
 vim.cmd([[ highlight NvimTreeIndentMarker guifg=#7D83AB ]])
 
+-- change color of vertical split line
+vim.cmd([[ hi VertSplit guifg = '#2c3043' guibg = '#011627' ]])
+
+-- remove split line in statusline
+vim.cmd([[ hi NvimTreeStatusLine guifg = '#2c3043' guibg = '#011627' ]])
+
 -- configure nvim-tree
 nvimtree.setup({
     view = {
@@ -26,16 +32,16 @@ nvimtree.setup({
                 item = "│",
                 bottom = "─",
                 none = " ",
-		    },	
+		    },
 		},
         -- disable arrow near folder
         icons = {
           glyphs = {
 				folder = {
-					arrow_closed = "", -- arrow when folder is closed
-					arrow_open = "", -- arrow when folder is open
+					-- arrow_closed = "", 
+					-- arrow_open = "", 
 				},
-			},  
+			},
         },
     },
 	-- disable window_picker for explorer to work well with window splits

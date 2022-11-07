@@ -12,7 +12,7 @@ opt.expandtab = true
 opt.autoindent = true
 
 -- line wrapping
-opt.wrap = false 
+opt.wrap = false
 
 -- search setting
 opt.ignorecase =true
@@ -25,6 +25,7 @@ opt.cursorline = true
 opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "no"
+opt.laststatus = 2
 
 -- backspace
 opt.backspace = "indent,eol,start"
@@ -40,3 +41,5 @@ opt.ttyfast = true
 
 opt.iskeyword:append("-")
 
+-- dont show ~ at file end
+opt.fillchars = { eob = " " }
