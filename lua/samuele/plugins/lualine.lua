@@ -47,10 +47,8 @@ local config = {
     section_separators = { left = '', right = ''},
     disabled_filetypes = {
         statusline = {
-            'NvimTree',
             'packer',
         },
-        winbar = {},
     },
     ignore_focus = {},
     always_divide_middle = true,
@@ -101,7 +99,7 @@ local config = {
   tabline = {},
   winbar = {},
   inactive_winbar = {},
-  extensions = {}
+  extensions = {'nvim-tree'}
 }
 
 lualine.setup(config)
