@@ -8,16 +8,20 @@ vim.g.loaded = 1
 vim.g.loaded_netrwPlugin = 1
 
 -- change color for arrows in tree to light blue
-vim.cmd([[ highlight NvimTreeIndentMarker guifg=#7D83AB ]])
+vim.cmd([[ highlight NvimTreeIndentMarker guifg=#7d83ab ]])
 
 -- change color of vertical split line
-vim.cmd([[ hi VertSplit guifg = '#2c3043' guibg = '#011627' ]])
+vim.cmd([[ hi VertSplit guifg=#2c3043 guibg=#011627 ]])
 
 -- remove split line in statusline
-vim.cmd([[ hi NvimTreeStatusLine guifg = '#2c3043' guibg = '#011627' ]])
+vim.cmd([[ hi NvimTreeStatusLine guifg=#2c3043 guibg=#011627 ]])
 
--- make root folder bold
-vim.cmd([[ hi NvimTreeRootFolder gui='bold'guifg='#ae81ff' ]])
+-- make root path and folder bold
+vim.cmd([[ hi NvimTreeRootFolder gui='bold' guifg=#ae81ff ]])
+vim.cmd([[ hi NvimTreeFolderName gui='bold' guifg=#82aaff ]])
+vim.cmd([[ hi NvimTreeFolderIcon gui='bold' guifg=#82aaff ]])
+vim.cmd([[ hi NvimTreeEmptyFolderName gui='bold' guifg=#82aaff ]])
+vim.cmd([[ hi NvimTreeOpenedFolderName gui='bold' guifg=#82aaff ]])
 
 -- keymaps
 local keymaps = {
@@ -29,7 +33,7 @@ local keymaps = {
     { key = "J",                              action = "last_sibling" },
     { key = "H",                              action = "toggle_dotfiles" },
     { key = "a",                              action = "create" },
-    { key = "D",                              action = "trash" },
+    { key = "d",                              action = "trash" },
     { key = "r",                              action = "rename" },
     { key = "R",                              action = "full_rename" },
     { key = "x",                              action = "cut" },
@@ -48,6 +52,7 @@ local keymaps = {
     { key = "/",                              action = "run_file_command" },
     { key = "<C-k>",                          action = "toggle_file_info" },
     { key = "?",                             action = "toggle_help" },
+    { key = "d",                                action = "close"}
   }
 -- configure nvim-tree
 nvimtree.setup({
@@ -79,8 +84,8 @@ nvimtree.setup({
             git_placement = 'after',
             glyphs = {
 				folder = {
-					-- arrow_closed = "", 
-					-- arrow_open = "", 
+					arrow_closed = "", 
+					arrow_open = "", 
 				},
 			},
         },
